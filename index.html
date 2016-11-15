@@ -2,8 +2,10 @@
 layout: default
 ---
 
-<div id="file-index">
-  {% for file in site.data.gitCloud %}
-    <a href="{{ site.github.url }}/{{file.href}}">{{file.name}}</a>
-  {% endfor %}
+<div class="wrapper">
+    {% for file in site.data.gitCloud %}
+    <li style="list-style: none">
+        <a href="{{ site.github.url }}/{{file.href}}">{{file.name}}</a>
+    </li>
+    {% endfor %}
 </div>
