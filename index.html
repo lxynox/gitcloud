@@ -2,10 +2,12 @@
 layout: default
 ---
 
-<div class="wrapper">
-    {% for file in site.data.gitCloud %}
-    <li style="list-style: none">
-        <a href="{{ site.github.url }}/{{file.href}}">{{file.name}}</a>
-    </li>
-    {% endfor %}
+<div class="container">
+    <ul class="collection">
+        {% for file in site.data.gitCloud %}
+        <li class="collection-item teal z-depth-5">
+            <a class="grey-text text-lighten-4" href="{{ site.github.url }}/{{file.href}}">{{file.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
